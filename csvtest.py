@@ -9,7 +9,9 @@ with open('users.csv', 'w', newline='') as csvfile:
     fieldnames = ['firstname', 'lastname', 'email']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
+    firstname = input("Förnamn: ")
+    lastname = input("Efternamn: ")
+    email = input("Email: ")
+
     writer.writeheader()
-    writer.writerow({'firstname': 'Baked', 'lastname': 'Beans', 'email': 'a@b'})
-    writer.writerow({'firstname': 'Lovely', 'lastname': 'Spam', 'email': 'asdf@b'})
-    writer.writerow({'firstname': 'Wonderful', 'lastname': 'Spam', 'email': 'awefwef@b'})
+    writer.writerow({'firstname': firstname, 'lastname': lastname, 'email': email})
